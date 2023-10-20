@@ -11,7 +11,26 @@ import SwiftUI
 struct NeapulseApp: App {
     var body: some Scene {
         WindowGroup {
-            LifeStyleView()
+            
+            TabView{
+                MapView()
+                    .tabItem{
+                        Image(systemName:"map")
+                        Text("Map")
+                    }
+                
+                ContentView()
+                    .tabItem{
+                        Image(systemName:"theatermasks")
+                        Text("Character")
+                    }
+                
+                LifeStyleView()
+                    .tabItem{
+                        Image(systemName:"figure.walk")
+                        Text("LifeStyle")
+                    }
+            }
             
         
             
