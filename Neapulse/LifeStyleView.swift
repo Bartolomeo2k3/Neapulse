@@ -9,15 +9,25 @@ import SwiftUI
 
 
 struct LifeStyleView: View {
+    
     var body: some View {
         
         NavigationStack{
             
             ScrollView{
+              
                 VStack(alignment:.listRowSeparatorLeading){
     
+                    Text("Food")
+                        .font(.title)
+                    NavigationLink(destination: Neapulse.Food()) {
+                        Image("Food")
+                        }
                         
+                    
+        
                    
+                       
                        
                     
                     
