@@ -20,7 +20,6 @@ struct LifeStyleView: View {
     
                     Text("Food")
                         .font(.title)
-                        .bold()
                     NavigationLink(destination: Neapulse.Food()) {
                         Image("Food")
                         }
