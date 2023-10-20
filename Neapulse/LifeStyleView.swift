@@ -16,30 +16,53 @@ struct LifeStyleView: View {
             
             ScrollView{
               
-                VStack(alignment:.listRowSeparatorLeading){
-    
+                VStack(alignment:.leading){
+                    
                     Text("Food")
                         .font(.title)
                         .bold()
+
+                    Text("Find new places you're going to love")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        
                     NavigationLink(destination: Neapulse.Food()) {
                         Image("Food")
-                        }
+                    }
+                    
                     
                     Text("Attraction")
                         .font(.title)
                         .bold()
+                        .padding(.top, 25.0)
+                    Text("Find new places you're going to love")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        
                     NavigationLink(destination: Neapulse.Attraction()) {
                         Image("Attraction")
-                        }
+                    }
                     
                     Text("Folklore")
                         .font(.title)
                         .bold()
+                        .padding(.top, 25.0)
+                    Text("Find new places you're going to love")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        
                     NavigationLink(destination: Neapulse.Folklore()) {
                         Image("Folklore")
-                        }
+                        
+                    }
                     
-                }.navigationTitle("LifeStyle")
+                    
+                }
+                .padding()
+                .navigationTitle("LifeStyle")
                 
             }
             
