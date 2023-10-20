@@ -11,8 +11,16 @@ import MapKit
 struct MapView: View {
     
     let napoli = CLLocationCoordinate2D(latitude: 40.8517746, longitude:14.2681244)
-    
-    var body: some View { 
+   /* init() {
+        for familyName in UIFont.familyNames {
+            print(familyName)
+            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+                print("--  \(fontName)")
+            }
+                    
+        }
+    }*/
+    var body: some View {
         NavigationStack{
             
             VStack(alignment: .leading){
@@ -36,13 +44,15 @@ struct MapView: View {
                 .mapStyle(.imagery)
             }
             Text("Megl sul ca mal accompagnat")
-                .font(.body)
+                .font(.custom("Herculanum", size: 18))
+            
                 .multilineTextAlignment(.leading)
             
         }
+       
     }
 }
 
 #Preview {
     MapView()
-}
+      }
