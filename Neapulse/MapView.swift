@@ -16,8 +16,15 @@ struct MapView: View {
         NavigationStack{
             
             VStack(alignment: .leading){
+                Text("Map")
+                  .font(.title)
+                  .bold()
+                  .padding(.leading)
                 Text("Find new places you're going to love")
-                    .font(.subheadline)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.gray)
+                    .padding(.leading)
                     
                 Map(){
                     Marker("Napoli",coordinate: napoli)
@@ -27,8 +34,7 @@ struct MapView: View {
                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
                 .padding()
                 .mapStyle(.imagery)
-            }.navigationTitle("Maps")
-                        
+            }
             Text("Megl sul ca mal accompagnat")
                 .font(.body)
                 .multilineTextAlignment(.leading)
