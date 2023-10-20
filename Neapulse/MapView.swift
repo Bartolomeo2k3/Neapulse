@@ -25,27 +25,29 @@ struct MapView: View {
             
             VStack(alignment: .leading){
                 Text("Map")
-                  .font(.title)
+                  .font(.largeTitle)
                   .bold()
-                  .padding(.leading)
                 Text("Find new places you're going to love")
                     .font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.gray)
-                    .padding(.leading)
+                  
                     
                 Map(){
                     Marker("Napoli",coordinate: napoli)
-                    
+                       
                 }
-                .frame(width:300,height:500)
+                
+                .frame(height:500)
                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
                 .padding()
                 .mapStyle(.imagery)
-            }
+            }.padding()
             Text("Megl sul ca mal accompagnat")
-                .font(.custom("Herculanum", size: 18))
+              
             
+                .font(.custom("Herculanum", size: 20))
+           
                 .multilineTextAlignment(.leading)
             
         }

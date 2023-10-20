@@ -21,6 +21,12 @@ struct LifeStyleView: View {
                     Text("Food")
                         .font(.title)
                         .bold()
+
+                    Text("Find new places you're going to love")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        
                     NavigationLink(destination: Neapulse.Food()) {
                         Image("Food")
                     }
@@ -29,7 +35,12 @@ struct LifeStyleView: View {
                     Text("Attraction")
                         .font(.title)
                         .bold()
-                        .padding(/*@START_MENU_TOKEN@*/.top, 36.0/*@END_MENU_TOKEN@*/)
+                        .padding(.top, 25.0)
+                    Text("Find new places you're going to love")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        
                     NavigationLink(destination: Neapulse.Attraction()) {
                         Image("Attraction")
                     }
@@ -37,7 +48,12 @@ struct LifeStyleView: View {
                     Text("Folklore")
                         .font(.title)
                         .bold()
-                        .padding(.top, 36.0)
+                        .padding(.top, 25.0)
+                    Text("Find new places you're going to love")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        
                     NavigationLink(destination: Neapulse.Folklore()) {
                         Image("Folklore")
                         
