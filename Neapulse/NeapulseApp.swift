@@ -11,9 +11,10 @@ import SwiftUI
 struct NeapulseApp: App {
     var body: some Scene {
         WindowGroup {
+            LifeStyleView()
             
+        
             
-            ContentView()
         }
     }
 }
