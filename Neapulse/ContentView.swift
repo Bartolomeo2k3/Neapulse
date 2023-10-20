@@ -13,7 +13,7 @@ struct ContentView: View {
             
             VStack{
                 NavigationStack{
-                    Text("Bart")
+                    Text("Ciao Ferdinando")
                         .fontWeight(.bold)
                         
                 }
