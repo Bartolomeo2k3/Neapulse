@@ -20,18 +20,24 @@ struct LifeStyleView: View {
     
                     Text("Food")
                         .font(.title)
+                        .bold()
                     NavigationLink(destination: Neapulse.Food()) {
                         Image("Food")
                         }
-                        
                     
-        
-                   
-                       
-                       
+                    Text("Attraction")
+                        .font(.title)
+                        .bold()
+                    NavigationLink(destination: Neapulse.Attraction()) {
+                        Image("Attraction")
+                        }
                     
-                    
-                    
+                    Text("Folklore")
+                        .font(.title)
+                        .bold()
+                    NavigationLink(destination: Neapulse.Folklore()) {
+                        Image("Folklore")
+                        }
                     
                 }.navigationTitle("LifeStyle")
                 
