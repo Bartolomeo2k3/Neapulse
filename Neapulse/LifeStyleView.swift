@@ -16,30 +16,37 @@ struct LifeStyleView: View {
             
             ScrollView{
               
-                VStack(alignment:.listRowSeparatorLeading){
-    
+                VStack(alignment:.leading){
+                    
                     Text("Food")
                         .font(.title)
                         .bold()
                     NavigationLink(destination: Neapulse.Food()) {
                         Image("Food")
-                        }
+                    }
+                    
                     
                     Text("Attraction")
                         .font(.title)
                         .bold()
+                        .padding(/*@START_MENU_TOKEN@*/.top, 36.0/*@END_MENU_TOKEN@*/)
                     NavigationLink(destination: Neapulse.Attraction()) {
                         Image("Attraction")
-                        }
+                    }
                     
                     Text("Folklore")
                         .font(.title)
                         .bold()
+                        .padding(.top, 36.0)
                     NavigationLink(destination: Neapulse.Folklore()) {
                         Image("Folklore")
-                        }
+                        
+                    }
                     
-                }.navigationTitle("LifeStyle")
+                    
+                }
+                .padding()
+                .navigationTitle("LifeStyle")
                 
             }
             
