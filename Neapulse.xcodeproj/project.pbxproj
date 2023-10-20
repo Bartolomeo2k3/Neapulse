@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6AB1C912AE2713400B2D8A4 /* HerculanumRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */; };
 		F77E67D02ADFE1E1004AF7F0 /* NeapulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */; };
 		F77E67D22ADFE1E1004AF7F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */; };
 		F77E67D42ADFE1E2004AF7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77E67D32ADFE1E2004AF7F0 /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HerculanumRegular.ttf; sourceTree = "<group>"; };
+		F6AB1C942AE2723700B2D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F77E67CC2ADFE1E1004AF7F0 /* Neapulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neapulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeapulseApp.swift; sourceTree = "<group>"; };
 		F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6AB1C8F2AE270F300B2D8A4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		F77E67C32ADFE1E1004AF7F0 = {
 			isa = PBXGroup;
 			children = (
@@ -104,9 +115,11 @@
 		F77E67CE2ADFE1E1004AF7F0 /* Neapulse */ = {
 			isa = PBXGroup;
 			children = (
+				F6AB1C942AE2723700B2D8A4 /* Info.plist */,
+				F6AB1C8F2AE270F300B2D8A4 /* Font */,
+				F7A8FF132ADFE84D0047DEE1 /* MapView.swift */,
 				F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */,
 				F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */,
-				F7A8FF132ADFE84D0047DEE1 /* MapView.swift */,
 				F7A8FF172ADFE8710047DEE1 /* LifeStyleView.swift */,
 				F7EAFD552AE263A400007E3F /* Attraction.swift */,
 				F7EAFD572AE263B400007E3F /* Food.swift */,
@@ -247,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77E67D72ADFE1E2004AF7F0 /* Preview Assets.xcassets in Resources */,
+				F6AB1C912AE2713400B2D8A4 /* HerculanumRegular.ttf in Resources */,
 				F77E67D42ADFE1E2004AF7F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +459,7 @@
 				DEVELOPMENT_TEAM = BR87TSD6UG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Neapulse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -474,6 +489,7 @@
 				DEVELOPMENT_TEAM = BR87TSD6UG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Neapulse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
