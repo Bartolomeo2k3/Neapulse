@@ -24,7 +24,7 @@ struct MapView: View {
         NavigationStack{
             
             VStack(alignment: .leading){
-                Text("Map")
+                Text("Mappy")
                   .font(.largeTitle)
                   .bold()
                 Text("Find new places you're going to love")
