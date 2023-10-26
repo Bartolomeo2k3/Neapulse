@@ -9,8 +9,37 @@ import SwiftUI
 
 struct Food: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        ZStack{
+            Color.blue
+            NavigationStack{
+                
+                ScrollView{
+                    
+                    VStack(alignment:.leading){
+                        VStack(alignment:.leading){
+                            Image("pizza")
+                                .resizable().clipShape(RoundedRectangle(cornerRadius: 15))
+                                .frame(width: 300, height: 300).padding()
+                            Text("Food")
+                                .font(.title)
+                                .bold()
+                            
+                            Text("Find new places you're going to love")
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.gray)
+                        }.padding()
+                        
+                        
+                        
+                        
+                    }.clipShape(RoundedRectangle(cornerRadius: 15))
+                        .navigationTitle("LifeStyle")
+                    
+                }
+                
+            }
+        }}
 }
 
 #Preview {

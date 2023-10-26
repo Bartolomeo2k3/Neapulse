@@ -21,6 +21,7 @@ struct MapView: View {
         }
     }*/
     var body: some View {
+        
         NavigationStack{
             
             VStack(alignment: .leading){

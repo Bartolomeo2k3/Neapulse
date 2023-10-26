@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct Folklore: View {
+    @State var valore: Float = 0
     var body: some View {
+        var cor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            .foregroundColor(Color(cor))
+        
+        ProgressView(value: (valore/10))
+        Button("Clicka"){
+            valore += 1
+        }
     }
 }
 

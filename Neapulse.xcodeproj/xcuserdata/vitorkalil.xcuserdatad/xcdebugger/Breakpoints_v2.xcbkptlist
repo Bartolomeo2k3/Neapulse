@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0F40BCBC-4EC8-4F87-9458-CA77BEDD9867"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D54C283C-C7C4-4F4F-AB90-A99B6AA6FE25"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Neapulse/LifeStyleView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D54C283C-C7C4-4F4F-AB90-A99B6AA6FE25 - 87a7969e62cb96aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Food&gt;, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Attraction&gt;, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Folklore&gt;)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Food&gt;, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Attraction&gt;, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Folklore&gt;)&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in Neapulse.LifeStyleView.body.getter : some"
+                  moduleName = "Neapulse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorkalil/Documents/GitHub/Neapulse/Neapulse/LifeStyleView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+               <Location
+                  uuid = "D54C283C-C7C4-4F4F-AB90-A99B6AA6FE25 - 4ae27f3233506c2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Food&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Attraction&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.Image, Neapulse.Folklore&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0&gt; in Neapulse.LifeStyleView.body.getter : some"
+                  moduleName = "Neapulse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorkalil/Documents/GitHub/Neapulse/Neapulse/LifeStyleView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1492">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
