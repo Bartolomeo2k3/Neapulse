@@ -10,6 +10,6 @@ import UIKit
 
 struct Character{
     var name:String
-    var points:Int = 0
+    var points:Float = 0
     
 }

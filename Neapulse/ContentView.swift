@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var variavel = false
     var body: some View {
         
             
             VStack{
-                NavigationStack{
+                
                     Text("Ciao Ferdinando")
-                        .fontWeight(.bold)
+                    .popover(isPresented: .constant(variavel)) {
+                        Text("oi")
+                        Button("clicka"){variavel = false}
+                    }
                         
+                Button("cllick"){
+                    variavel = true
                 }
                 
                 

@@ -12,5 +12,6 @@ struct Question{
     var text:String
     var answers:[String]
     var charIndex:[[Int]]
+    var pointsAdded:Float = 1
     
 }

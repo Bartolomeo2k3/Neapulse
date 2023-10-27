@@ -34,7 +34,7 @@ struct Quiz{
     }
     mutating func increasePoints(index:[Int]) {
         for num in index {
-            characters[num].points += 1
+            characters[num].points += questions[questionIndex].pointsAdded
         }
     }
 }
