@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B27A6F22AEFB84200CB1A5A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */; };
+		6B27A6F42AEFBDC300CB1A5A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */; };
 		6B94B91D2AE921B6003D5E33 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91C2AE921B6003D5E33 /* QuizView.swift */; };
 		6B94B91F2AE921C3003D5E33 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */; };
 		6B94B9212AE921CF003D5E33 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B9202AE921CF003D5E33 /* QuizModel.swift */; };
 		6B94B9232AE9282C003D5E33 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B9222AE9282C003D5E33 /* CharacterModel.swift */; };
 		F6AB1C912AE2713400B2D8A4 /* HerculanumRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */; };
-		F736B6CD2AEFAEC600351B31 /* AllowLocation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736B6CC2AEFAEC600351B31 /* AllowLocation2.swift */; };
 		F77E67D02ADFE1E1004AF7F0 /* NeapulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */; };
 		F77E67D22ADFE1E1004AF7F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */; };
 		F77E67D42ADFE1E2004AF7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F77E67D32ADFE1E2004AF7F0 /* Assets.xcassets */; };
@@ -45,13 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		6B94B91C2AE921B6003D5E33 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		6B94B9202AE921CF003D5E33 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		6B94B9222AE9282C003D5E33 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HerculanumRegular.ttf; sourceTree = "<group>"; };
 		F6AB1C942AE2723700B2D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F736B6CC2AEFAEC600351B31 /* AllowLocation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowLocation2.swift; sourceTree = "<group>"; };
 		F77E67CC2ADFE1E1004AF7F0 /* Neapulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neapulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeapulseApp.swift; sourceTree = "<group>"; };
 		F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,9 +141,10 @@
 				F6AB1C942AE2723700B2D8A4 /* Info.plist */,
 				F6AB1C8F2AE270F300B2D8A4 /* Font */,
 				F7A8FF132ADFE84D0047DEE1 /* MapView.swift */,
+				6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */,
 				F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */,
 				F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */,
-				F736B6CC2AEFAEC600351B31 /* AllowLocation2.swift */,
+				6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */,
 				6B94B91B2AE921A1003D5E33 /* New Group */,
 				F7A8FF172ADFE8710047DEE1 /* LifeStyleView.swift */,
 				F7EAFD552AE263A400007E3F /* Attraction.swift */,
@@ -310,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77E67D22ADFE1E1004AF7F0 /* ContentView.swift in Sources */,
-				F736B6CD2AEFAEC600351B31 /* AllowLocation2.swift in Sources */,
 				F7A8FF142ADFE84D0047DEE1 /* MapView.swift in Sources */,
 				F7EAFD562AE263A400007E3F /* Attraction.swift in Sources */,
 				F77E67D02ADFE1E1004AF7F0 /* NeapulseApp.swift in Sources */,
@@ -319,8 +321,10 @@
 				F7EAFD5A2AE263C800007E3F /* Folklore.swift in Sources */,
 				6B94B91D2AE921B6003D5E33 /* QuizView.swift in Sources */,
 				6B94B91F2AE921C3003D5E33 /* QuestionModel.swift in Sources */,
+				6B27A6F42AEFBDC300CB1A5A /* LocationDetailView.swift in Sources */,
 				F7A8FF182ADFE8710047DEE1 /* LifeStyleView.swift in Sources */,
 				F7EAFD582AE263B400007E3F /* Food.swift in Sources */,
+				6B27A6F22AEFB84200CB1A5A /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

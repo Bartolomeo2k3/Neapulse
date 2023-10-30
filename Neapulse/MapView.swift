@@ -8,8 +8,6 @@
 import SwiftUI
 import MapKit
 
-
-
 struct MapView: View {
     @State private var cameraPosition: MapCameraPosition = .region(.userRegion)
     @State private var searchText = ""
