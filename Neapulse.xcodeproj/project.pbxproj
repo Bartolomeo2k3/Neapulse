@@ -108,8 +108,6 @@
 				6B94B91C2AE921B6003D5E33 /* QuizView.swift */,
 				6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */,
 				6B94B9202AE921CF003D5E33 /* QuizModel.swift */,
-				6B94B9222AE9282C003D5E33 /* CharacterModel.swift */,
-				6B67358C2AF0416800456593 /* CharacterListModel.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -127,6 +125,8 @@
 			children = (
 				F6529FC72AF01DBC00EF9BB7 /* CharacterView.swift */,
 				F644590A2AF03DEB00B0A06D /* HistoryView.swift */,
+				6B67358C2AF0416800456593 /* CharacterListModel.swift */,
+				6B94B9222AE9282C003D5E33 /* CharacterModel.swift */,
 				F77E67D32ADFE1E2004AF7F0 /* Assets.xcassets */,
 			);
 			path = CCharacter;
