@@ -19,7 +19,7 @@ struct NeapulseApp: App {
                         Text("Map")
                     }
                 
-                ContentView()
+                CharactersView()
                     .tabItem{
                         Image(systemName:"theatermasks")
                         Text("Characters")
