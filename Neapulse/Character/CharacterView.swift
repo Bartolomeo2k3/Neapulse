@@ -13,6 +13,7 @@ struct CharactersView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
+                
                         HStack{
                             NavigationLink (destination: Neapulse.HistoryView(charText: $characters[0].caracteristic, charName: $characters[0].name, charImage: $characters[0].image)){
                                 VStack {
@@ -171,7 +172,7 @@ struct CharactersView: View {
                                 
                             
                         }
-                    }
+            } .padding()
                     .navigationTitle("Characters")
                     
                 }
