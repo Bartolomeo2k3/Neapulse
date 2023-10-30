@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuizView: View {
+    @State var myCharacter:String = "a"
+    @State var progress:Float = 0
     @State var nostroQuiz = Quiz(questions: [
         Question(text: "What would you like to do the most?",answers: ["Drink good wine and live life as a work of art","Discover new places and find better myself "],charIndex: [[0,1,2,3,4,5,6,7],[8,9,10,11]]),
         Question(text: "What is closest to your life's purpouse?",answers: ["To love art and create something new","To work at my best to enjoy life and my free time"],charIndex: [[0,1,2,3],[4,5,6,7,8,9,10,11]]),
@@ -23,7 +25,7 @@ struct QuizView: View {
         
         Question(text: "How would you rather spend a day in Naples?",answers: ["Going for a walk and observe monuments and churches","Chilling on the grass of Capodimonte park with my pet"],charIndex: [[8],[9]]),
         Question(text: "How would you rather spend a day in Naples?",answers: ["Visiting mysterious places, such as Underground Naples and Fontanelle cemetery","Sunbathing at the most beautiful beaches of Sorrento coast"],charIndex: [[10],[11]]),
-        Question(text: "What is closer to your definition of beauty?",answers: ["The serene peace of a beautiful landscape, the harmonious order of a statue, the perfection of a diamond","The secret charm of things, tormented like the depth of the sea, poised like a flame"],charIndex: [[8,9],[10,11]]),
+        Question(text: "What is closer to your definition of beauty?",answers: ["The serene peace of a beautiful landscape, the harmonious order of a statue, the perfection of a diamond","The secret charm of things, tormented like the depth of the sea, poised like a flame"],charIndex: [[8,9],[10,11]])
 
 
     ])
@@ -31,7 +33,7 @@ struct QuizView: View {
     var body: some View {
         VStack(spacing:50){
             
-            ProgressView(value: Float(nostroQuiz.questionIndex)/Float(5))
+            ProgressView(value: progress/Float(6))
                 .progressViewStyle(.linear)
                 .padding(.bottom, 30.0)
           
@@ -39,14 +41,34 @@ struct QuizView: View {
         HStack(alignment:.center){
             Text(nostroQuiz.getQuestion()).font(.title)
                 .multilineTextAlignment(.center)
-                .bold()
+                .bold().padding([.top, .leading, .trailing])
         }.padding(.top, 30.0)
             
             
         Button(nostroQuiz.getAnswers()[0]){
-            
+            progress += 1
             nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 0))
+            if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
+                for char in nostroQuiz.characters {
+                    if (char.points > 3){
+                        myCharacter = char.name
+                    }
+                }
+            }
             nostroQuiz.nextQuestion()
+            if(nostroQuiz.questionIndex==3){
+                if(nostroQuiz.characters[11].points >= 1.5 && nostroQuiz.characters[5].points != 2){
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                } else if(nostroQuiz.characters[5].points == 2){
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                }}
             
         }.font(.title3)
             .foregroundColor(.black)
@@ -57,9 +79,30 @@ struct QuizView: View {
         
             
         Button(nostroQuiz.getAnswers()[1]){
-            
+            progress += 1
             nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 1))
+            if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
+                for char in nostroQuiz.characters {
+                    if (char.points > 3){
+                        myCharacter = char.name
+                    }
+                }
+            }
             nostroQuiz.nextQuestion()
+        
+            if(nostroQuiz.questionIndex == 3){
+                if(nostroQuiz.characters[11].points >= 1.5 && nostroQuiz.characters[5].points != 2){
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                }else if(nostroQuiz.characters[5].points == 2){
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()
+                    nostroQuiz.nextQuestion()}}
+            
             
         }.font(.title3)
             .foregroundColor(.black)
@@ -70,6 +113,8 @@ struct QuizView: View {
             
             //Testing
             Text(String(nostroQuiz.characters[5].points))
+            Text(String(nostroQuiz.questionIndex))
+            Text(myCharacter)
             
             
         }.frame(height:670)
