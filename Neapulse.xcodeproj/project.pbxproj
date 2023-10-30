@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B27A6F22AEFB84200CB1A5A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */; };
 		6B27A6F42AEFBDC300CB1A5A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */; };
+		6B67358D2AF0416800456593 /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B67358C2AF0416800456593 /* CharacterListModel.swift */; };
 		6B94B91D2AE921B6003D5E33 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91C2AE921B6003D5E33 /* QuizView.swift */; };
 		6B94B91F2AE921C3003D5E33 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */; };
 		6B94B9212AE921CF003D5E33 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B9202AE921CF003D5E33 /* QuizModel.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		6B67358C2AF0416800456593 /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
 		6B94B91C2AE921B6003D5E33 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		6B94B9202AE921CF003D5E33 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */,
 				6B94B9202AE921CF003D5E33 /* QuizModel.swift */,
 				6B94B9222AE9282C003D5E33 /* CharacterModel.swift */,
+				6B67358C2AF0416800456593 /* CharacterListModel.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				6B27A6F42AEFBDC300CB1A5A /* LocationDetailView.swift in Sources */,
 				F7A8FF182ADFE8710047DEE1 /* LifeStyleView.swift in Sources */,
 				F7EAFD582AE263B400007E3F /* Food.swift in Sources */,
+				6B67358D2AF0416800456593 /* CharacterListModel.swift in Sources */,
 				F6529FC82AF01DBC00EF9BB7 /* CharacterView.swift in Sources */,
 				6B27A6F22AEFB84200CB1A5A /* LocationManager.swift in Sources */,
 			);

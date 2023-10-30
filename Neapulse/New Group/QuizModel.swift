@@ -13,15 +13,14 @@ struct Quiz{
     var questions:[Question]
     var questionIndex:Int = 0
  
-    var characters = [Character(name:"Pulcinella"),Character(name:"Muna"),Character(name:"Partenope")]
+    
+    var characters = CharacterList().characters
     func getQuestion() -> String {
         return questions[questionIndex].text
     }
     mutating func nextQuestion() {
         if (questionIndex == (questions.count-1)){
             questionIndex = 0} else{questionIndex += 1}
-        
-        
     }
     func getAnswers() -> [String]{
         return questions[questionIndex].answers
