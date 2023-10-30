@@ -59,7 +59,7 @@
 		F644590A2AF03DEB00B0A06D /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		F6529FC72AF01DBC00EF9BB7 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HerculanumRegular.ttf; sourceTree = "<group>"; };
-		F6AB1C942AE2723700B2D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6AB1C942AE2723700B2D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F77E67CC2ADFE1E1004AF7F0 /* Neapulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neapulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeapulseApp.swift; sourceTree = "<group>"; };
 		F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,14 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B94B91B2AE921A1003D5E33 /* New Group */ = {
+		6B94B91B2AE921A1003D5E33 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
 				6B94B91C2AE921B6003D5E33 /* QuizView.swift */,
 				6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */,
 				6B94B9202AE921CF003D5E33 /* QuizModel.swift */,
+				F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */,
 			);
-			path = "New Group";
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 		F6AB1C8F2AE270F300B2D8A4 /* Font */ = {
@@ -120,16 +121,36 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		F6FF00EC2AF0287D00863FDC /* CCharacter */ = {
+		F6BBFE212AF062D90075DE40 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F7A8FF132ADFE84D0047DEE1 /* MapView.swift */,
+				6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */,
+				6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F6BBFE222AF062FA0075DE40 /* Lifestyle */ = {
+			isa = PBXGroup;
+			children = (
+				F7A8FF172ADFE8710047DEE1 /* LifeStyleView.swift */,
+				F7EAFD552AE263A400007E3F /* Attraction.swift */,
+				F7EAFD572AE263B400007E3F /* Food.swift */,
+				F7EAFD592AE263C800007E3F /* Folklore.swift */,
+			);
+			path = Lifestyle;
+			sourceTree = "<group>";
+		};
+		F6FF00EC2AF0287D00863FDC /* Character */ = {
 			isa = PBXGroup;
 			children = (
 				F6529FC72AF01DBC00EF9BB7 /* CharacterView.swift */,
 				F644590A2AF03DEB00B0A06D /* HistoryView.swift */,
 				6B67358C2AF0416800456593 /* CharacterListModel.swift */,
 				6B94B9222AE9282C003D5E33 /* CharacterModel.swift */,
-				F77E67D32ADFE1E2004AF7F0 /* Assets.xcassets */,
 			);
-			path = CCharacter;
+			path = Character;
 			sourceTree = "<group>";
 		};
 		F77E67C32ADFE1E1004AF7F0 = {
@@ -137,7 +158,6 @@
 			children = (
 				F77E67CE2ADFE1E1004AF7F0 /* Neapulse */,
 				F77E67DF2ADFE1E2004AF7F0 /* NeapulseTests */,
-				F77E67E92ADFE1E2004AF7F0 /* NeapulseUITests */,
 				F77E67CD2ADFE1E1004AF7F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,20 +175,15 @@
 		F77E67CE2ADFE1E1004AF7F0 /* Neapulse */ = {
 			isa = PBXGroup;
 			children = (
-				F6FF00EC2AF0287D00863FDC /* CCharacter */,
-				F6AB1C942AE2723700B2D8A4 /* Info.plist */,
-				F6AB1C8F2AE270F300B2D8A4 /* Font */,
-				F7A8FF132ADFE84D0047DEE1 /* MapView.swift */,
-				6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */,
 				F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */,
-				F77E67D12ADFE1E1004AF7F0 /* ContentView.swift */,
-				6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */,
-				6B94B91B2AE921A1003D5E33 /* New Group */,
-				F7A8FF172ADFE8710047DEE1 /* LifeStyleView.swift */,
-				F7EAFD552AE263A400007E3F /* Attraction.swift */,
-				F7EAFD572AE263B400007E3F /* Food.swift */,
-				F7EAFD592AE263C800007E3F /* Folklore.swift */,
+				F6FF00EC2AF0287D00863FDC /* Character */,
+				F6BBFE212AF062D90075DE40 /* Map */,
+				6B94B91B2AE921A1003D5E33 /* Quiz */,
+				F6BBFE222AF062FA0075DE40 /* Lifestyle */,
+				F6AB1C8F2AE270F300B2D8A4 /* Font */,
 				F77E67D52ADFE1E2004AF7F0 /* Preview Content */,
+				F77E67D32ADFE1E2004AF7F0 /* Assets.xcassets */,
+				F6AB1C942AE2723700B2D8A4 /* Info.plist */,
 			);
 			path = Neapulse;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F77E67E02ADFE1E2004AF7F0 /* NeapulseTests.swift */,
+				F77E67E92ADFE1E2004AF7F0 /* NeapulseUITests */,
 			);
 			path = NeapulseTests;
 			sourceTree = "<group>";
