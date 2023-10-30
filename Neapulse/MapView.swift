@@ -18,6 +18,7 @@ struct MapView: View {
     @State private var routeDisaplaying = false
     @State private var route: MKRoute?
     @State private var routeDestination: MKMapItem?
+   
     @ObservedObject var locationManager = LocationManager.shared
     
    /* init() {
@@ -108,7 +109,7 @@ struct MapView: View {
                 .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
                 .padding()
                 .mapStyle(.standard)
-                VStack{
+                /*VStack{
                     Button(){
                         LocationManager.shared.requestLocation()
                     }label:{
@@ -119,7 +120,7 @@ struct MapView: View {
                     }
                     .frame(width:UIScreen.main.bounds.width)
                     .padding(.horizontal, -20)
-                }
+                }*/
             }.padding()
             Text("Megl sul ca mal accompagnat")
               
