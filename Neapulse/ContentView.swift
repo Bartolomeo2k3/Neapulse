@@ -19,8 +19,10 @@ struct ContentView: View {
             HStack(alignment:.center){
                 Text("Domanda lunghissima per capire come viene")
                     .font(.title)
+                    .multilineTextAlignment(.center)
                     .bold()
-                    .padding()
+
+                    
                 
                 
 
@@ -35,8 +37,10 @@ struct ContentView: View {
                     .foregroundColor(.black)
                     .frame(width:300,height: 55)
                     .background(.white)
-                    .shadow(radius:5.0)
-            }
+                    
+                    
+            }.clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(radius:5.0)
             
             Button{
                 
@@ -49,8 +53,9 @@ struct ContentView: View {
                     .background(.white)
                     .shadow(radius:5.0)
                 
-            }
-        }
+            }.clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(radius:5.0)
+        }.frame(height:670)
     }
 }
     #Preview {

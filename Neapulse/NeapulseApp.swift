@@ -22,7 +22,7 @@ struct NeapulseApp: App {
                 ContentView()
                     .tabItem{
                         Image(systemName:"theatermasks")
-                        Text("Character")
+                        Text("Characters")
                     }
                 
                 LifeStyleView()
