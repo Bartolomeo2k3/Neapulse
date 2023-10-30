@@ -39,6 +39,7 @@ struct MapView: View {
                 Text("Map")
                   .font(.largeTitle)
                   .bold()
+                  .padding(.top, 13.0)
                 Text("Find new places you're going to love")
                     .font(.headline)
                     .fontWeight(.semibold)
