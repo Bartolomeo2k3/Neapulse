@@ -8,5 +8,8 @@
 import Foundation
 
 struct CharacterList{
-    var characters:[Character] = [Character(name: "Pulcinella", points: 0, description: "", image: ""),Character(name: "Munaciello", points: 0, description: "", image: ""),Character(name: "Ferdinando", points: 0, description: "", image: "")]
+    var characters:[Character] = [
+        Character(name: "Pulcinella", history: "", image: ""),
+        Character(name: "Munaciello", history: "", image: ""),
+        Character(name: "Ferdinando", history: "", image: "")]
 }
