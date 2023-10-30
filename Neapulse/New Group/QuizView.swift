@@ -19,6 +19,7 @@ struct QuizView: View {
             nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 1))
             nostroQuiz.nextQuestion()
         }
+        
         Text(String(nostroQuiz.characters[0].points))
         Text(String(nostroQuiz.characters[1].points))
     }
