@@ -7,32 +7,53 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    @State var variavel = false
+    @State private var progress = 0.1
     var body: some View {
-        
+        ProgressView(value:progress)
+            .progressViewStyle(.linear)
+            .padding()
+        VStack(spacing:35){
             
-            VStack{
-                
-                    Text("Ciao Ferdinando")
-                    .popover(isPresented: .constant(variavel)) {
-                        Text("oi")
-                        Button("clicka"){variavel = false}
-                    }
-                        
-                Button("cllick"){
-                    variavel = true
-                }
+            HStack(alignment:.center){
+                Text("Domanda lunghissima per capire come viene")
+                    .font(.title)
+                    .bold()
+                    .padding()
                 
                 
+
+            }.padding()
+            Button{
+                progress += 0.00
+                    
                 
+            }label:{
+                Text("Si")
+                    .font(.title3)
+                    .foregroundColor(.black)
+                    .frame(width:300,height: 55)
+                    .background(.white)
+                    .shadow(radius:5.0)
             }
             
-            
-            
+            Button{
+                
+            }label:{
+                Text("No")
+                    
+                    .font(.title3)
+                    .foregroundColor(.black)
+                    .frame(width:300,height: 55)
+                    .background(.white)
+                    .shadow(radius:5.0)
+                
+            }
         }
     }
-
-#Preview {
-    ContentView()
 }
+    #Preview {
+        ContentView()
+    }
+
