@@ -40,7 +40,7 @@ struct MapView: View {
                   .font(.largeTitle)
                   .bold()
                   .padding(.top, 13.0)
-                Text("Find new places you're going to love")
+                Text("Find a character to customize your map")
                     .font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.gray)
