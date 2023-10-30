@@ -13,6 +13,7 @@
 		6B94B91F2AE921C3003D5E33 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */; };
 		6B94B9212AE921CF003D5E33 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B9202AE921CF003D5E33 /* QuizModel.swift */; };
 		6B94B9232AE9282C003D5E33 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B9222AE9282C003D5E33 /* CharacterModel.swift */; };
+		F644590B2AF03DEB00B0A06D /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F644590A2AF03DEB00B0A06D /* HistoryView.swift */; };
 		F6529FC82AF01DBC00EF9BB7 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6529FC72AF01DBC00EF9BB7 /* CharacterView.swift */; };
 		F6AB1C912AE2713400B2D8A4 /* HerculanumRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */; };
 		F77E67D02ADFE1E1004AF7F0 /* NeapulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77E67CF2ADFE1E1004AF7F0 /* NeapulseApp.swift */; };
@@ -53,6 +54,7 @@
 		6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		6B94B9202AE921CF003D5E33 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		6B94B9222AE9282C003D5E33 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		F644590A2AF03DEB00B0A06D /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		F6529FC72AF01DBC00EF9BB7 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		F6AB1C902AE2713400B2D8A4 /* HerculanumRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HerculanumRegular.ttf; sourceTree = "<group>"; };
 		F6AB1C942AE2723700B2D8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F6529FC72AF01DBC00EF9BB7 /* CharacterView.swift */,
+				F644590A2AF03DEB00B0A06D /* HistoryView.swift */,
 				F77E67D32ADFE1E2004AF7F0 /* Assets.xcassets */,
 			);
 			path = CCharacter;
@@ -330,6 +333,7 @@
 				6B94B9232AE9282C003D5E33 /* CharacterModel.swift in Sources */,
 				6B94B9212AE921CF003D5E33 /* QuizModel.swift in Sources */,
 				F7EAFD5A2AE263C800007E3F /* Folklore.swift in Sources */,
+				F644590B2AF03DEB00B0A06D /* HistoryView.swift in Sources */,
 				6B94B91D2AE921B6003D5E33 /* QuizView.swift in Sources */,
 				6B94B91F2AE921C3003D5E33 /* QuestionModel.swift in Sources */,
 				6B27A6F42AEFBDC300CB1A5A /* LocationDetailView.swift in Sources */,
