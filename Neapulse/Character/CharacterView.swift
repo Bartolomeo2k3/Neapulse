@@ -12,6 +12,7 @@ struct CharactersView: View {
     @State private var characters = CharacterList().characters
     var body: some View {
         NavigationStack{
+            Text("Discover the stories of the neapolitan characters").foregroundColor(.gray).padding(.horizontal, 12.0)
             ScrollView{
             
                         HStack{
@@ -182,10 +183,10 @@ struct CharactersView: View {
                         }
                 if (UserDefaults.standard.string(forKey: "my_character") == nil){
                     NavigationLink(destination:Neapulse.QuizView()){
-                        Text("Click").font(.title3)
+                        Text("Find your character").font(.title3)
                             .padding()
                             .foregroundColor(.white)
-                            .frame(width:150,height: 35)
+                            .frame(width:250,height: 45)
                             .background(.black)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .shadow(radius:5.0)

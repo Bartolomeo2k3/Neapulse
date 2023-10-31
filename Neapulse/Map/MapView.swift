@@ -48,7 +48,8 @@ struct MapView: View {
                 
                 Map(position: $cameraPosition, selection: $mapSelection ){
                     
-                   //Marker("my location",coordinate: .userLocation)
+                  
+                   Marker("MY",coordinate: CLLocationCoordinate2D(latitude: 40.8517746, longitude: 14.2681244))
                     
                     
                
@@ -72,7 +73,7 @@ struct MapView: View {
                             .stroke(.blue, lineWidth: 6)
                     }
                     
-                }.overlay(alignment:.top){
+                }/*.overlay(alignment:.top){
                     TextField("Search for a place...",text: $searchText)
                         .font(.subheadline)
                         .padding(12)
@@ -84,7 +85,7 @@ struct MapView: View {
                 .onSubmit(of: .text){
                     Task{
                         await searchPlaces()}
-                }
+                }*/
                 .onChange(of: getDirections, {oldValue, newValue in
                     if newValue{
                         fetchRoute()
