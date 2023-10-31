@@ -52,6 +52,8 @@ struct QuizView: View {
                 for char in nostroQuiz.characters {
                     if (char.points > 3){
                         myCharacter = char.name
+                        myCharacter = char.name
+                        UserDefaults.standard.set(char.name, forKey: "my_character")
                     }
                 }
             }
@@ -85,6 +87,7 @@ struct QuizView: View {
                 for char in nostroQuiz.characters {
                     if (char.points > 3){
                         myCharacter = char.name
+                        UserDefaults.standard.set(char.name, forKey: "my_character")
                     }
                 }
             }
@@ -113,7 +116,7 @@ struct QuizView: View {
             
             //Testing
             Text(String(nostroQuiz.characters[5].points))
-            Text(String(nostroQuiz.questionIndex))
+            Text(String(UserDefaults.standard.string(forKey: "my_character") ?? "Nothing"))
             Text(myCharacter)
             
             

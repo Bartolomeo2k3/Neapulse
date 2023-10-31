@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CharactersView: View {
-
+    @State var myChar = UserDefaults.standard.string(forKey: "my_Character")
     @State private var characters = CharacterList().characters
     var body: some View {
         NavigationStack{
             ScrollView{
-                
+                Text(UserDefaults.standard.string(forKey: "my_character") ?? "Nothing")
                         HStack{
                             NavigationLink (destination: Neapulse.HistoryView(charText: $characters[0].caracteristic, charName: $characters[0].name, charImage: $characters[0].image)){
                                 VStack {
@@ -172,6 +172,10 @@ struct CharactersView: View {
                                 
                             
                         }
+                if (UserDefaults.standard.string(forKey: "my_character") == nil){
+                    NavigationLink(destination:Neapulse.QuizView()){
+                        Text("Click")
+                    }}
             } .padding()
                     .navigationTitle("Characters")
                     
