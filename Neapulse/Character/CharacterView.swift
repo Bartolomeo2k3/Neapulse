@@ -13,12 +13,10 @@ struct CharactersView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                Text(UserDefaults.standard.string(forKey: "my_character") ?? "Nothing")
+            
                         HStack{
                             NavigationLink (destination: Neapulse.HistoryView(charText: $characters[5].caracteristic, charName: $characters[5].name, charImage: $characters[5].image
-                                                                             ))
-                               
-                            {
+                                                                             )){
                                 VStack {
                                     Image(characters[5].image)
                                         .resizable()

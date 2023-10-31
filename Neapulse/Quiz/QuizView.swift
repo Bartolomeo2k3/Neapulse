@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct QuizView: View {
-    @State var myCharacter:String = "a"
     @State var progress:Float = 0
     @State var nostroQuiz = Quiz(questions: [
         Question(text: "What would you like to do the most?",answers: ["Drink good wine and live life as a work of art","Discover new places and find better myself "],charIndex: [[0,1,2,3,4,5,6,7],[8,9,10,11]]),
@@ -31,98 +30,100 @@ struct QuizView: View {
     ])
 
     var body: some View {
-        VStack(spacing:50){
-            
-            ProgressView(value: progress/Float(6))
-                .progressViewStyle(.linear)
-                .padding(.bottom, 30.0)
-          
-            
-        HStack(alignment:.center){
-            Text(nostroQuiz.getQuestion()).font(.title)
-                .multilineTextAlignment(.center)
-                .bold().padding([.top, .leading, .trailing])
-        }.padding(.top, 30.0)
-            
-            
-        Button(nostroQuiz.getAnswers()[0]){
-            progress += 1
-            nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 0))
-            if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
-                for char in nostroQuiz.characters {
-                    if (char.points > 3){
-                        myCharacter = char.name
-                        myCharacter = char.name
-                        UserDefaults.standard.set(char.name, forKey: "my_character")
+        if (UserDefaults.standard.string(forKey: "my_character") == nil){
+            VStack(spacing:50){
+                
+                ProgressView(value: progress/Float(6))
+                    .progressViewStyle(.linear)
+                    .padding(.bottom, 30.0)
+                
+                
+                HStack(alignment:.center){
+                    Text(nostroQuiz.getQuestion()).font(.title)
+                        .multilineTextAlignment(.center)
+                        .bold().padding([.top, .leading, .trailing])
+                }.padding(.top, 30.0)
+                
+                
+                Button(nostroQuiz.getAnswers()[0]){
+                    progress += 1
+                    nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 0))
+                    if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
+                        for char in nostroQuiz.characters {
+                            if (char.points > 3){
+                                UserDefaults.standard.set(char.name, forKey: "my_character")
+                            }
+                        }
                     }
-                }
-            }
-            nostroQuiz.nextQuestion()
-            if(nostroQuiz.questionIndex==3){
-                if(nostroQuiz.characters[11].points >= 1.5 && nostroQuiz.characters[5].points != 2){
                     nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                } else if(nostroQuiz.characters[5].points == 2){
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                }}
-            
-        }.font(.title3)
-            .foregroundColor(.black)
-            .frame(width:350,height: 75)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .shadow(radius:5.0)
-        
-            
-        Button(nostroQuiz.getAnswers()[1]){
-            progress += 1
-            nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 1))
-            if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
-                for char in nostroQuiz.characters {
-                    if (char.points > 3){
-                        myCharacter = char.name
-                        UserDefaults.standard.set(char.name, forKey: "my_character")
+                    if(nostroQuiz.questionIndex==3){
+                        if(nostroQuiz.characters[11].points >= 1.5 && nostroQuiz.characters[5].points != 2){
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                        } else if(nostroQuiz.characters[5].points == 2){
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                        }}
+                    
+                }.font(.title3)
+                    .foregroundColor(.black)
+                    .frame(width:350,height: 75)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(radius:5.0)
+                
+                
+                Button(nostroQuiz.getAnswers()[1]){
+                    progress += 1
+                    nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 1))
+                    if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
+                        for char in nostroQuiz.characters {
+                            if (char.points > 3){
+                                UserDefaults.standard.set(char.name, forKey: "my_character")
+                            }
+                        }
                     }
-                }
+                    nostroQuiz.nextQuestion()
+                    
+                    if(nostroQuiz.questionIndex == 3){
+                        if(nostroQuiz.characters[11].points >= 1.5 && nostroQuiz.characters[5].points != 2){
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                        }else if(nostroQuiz.characters[5].points == 2){
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()
+                            nostroQuiz.nextQuestion()}}
+                    
+                    
+                }.font(.title3)
+                    .foregroundColor(.black)
+                    .frame(width:350,height: 75)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(radius:5.0)
+                
+                
+                
+            }.frame(height:770)
+        }else{
+            
+            NavigationLink(destination: Neapulse.CharactersView()) {
+                VStack{
+                    Text("YOU FINISHED THE TEST")
+                    Text("Go back to the App")}}
             }
-            nostroQuiz.nextQuestion()
-        
-            if(nostroQuiz.questionIndex == 3){
-                if(nostroQuiz.characters[11].points >= 1.5 && nostroQuiz.characters[5].points != 2){
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                }else if(nostroQuiz.characters[5].points == 2){
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()
-                    nostroQuiz.nextQuestion()}}
-            
-            
-        }.font(.title3)
-            .foregroundColor(.black)
-            .frame(width:350,height: 75)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .shadow(radius:5.0)
-            
-            //Testing
-            Text(String(nostroQuiz.characters[5].points))
-            Text(String(UserDefaults.standard.string(forKey: "my_character") ?? "Nothing"))
-            Text(myCharacter)
-            
-            
-        }.frame(height:670)
+        }
     }
-}
+
 
 #Preview {
     QuizView()
