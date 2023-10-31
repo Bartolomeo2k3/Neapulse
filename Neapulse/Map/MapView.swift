@@ -47,7 +47,7 @@ struct MapView: View {
                     .foregroundColor(Color.gray)
                     .padding(.bottom)
                 Map(position: $cameraPosition, selection: $mapSelection){
-                //pins di munaciello
+                //pins di Pazzariello
                     personagens[7].places[0]
                     personagens[7].places[1]
                     personagens[7].places[2]
@@ -132,7 +132,6 @@ struct MapView: View {
                 .multilineTextAlignment(.leading)
             
         }
-       
     }
     
     
@@ -166,7 +165,9 @@ extension MapView{
                 }
             }
         }
+        
     }
+    
 }
 
 

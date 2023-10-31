@@ -7,58 +7,47 @@
 
 import SwiftUI
 
+import SwiftUI
+import MapKit
 
-struct ContentView: View {
-    @State private var progress = 0.1
+extension CLLocationCoordinate2D: Identifiable {
+    public var id: String {
+        "\(latitude)-\(longitude)"
+    }
+}
+
+struct Place: Identifiable {
+    var id = UUID()
+    let name: String
+    let coordinate: CLLocationCoordinate2D
+    let color: Color
+}
+struct ContentView : View {
+    //40.854190, 14.243062/
+    
+    var personagens = CharacterList().characters
+    @State var c = UserDefaults.standard.integer(forKey: "my_var")
+    @State var region = MKCoordinateRegion(center:.init(latitude: 40.854190,
+                                                       longitude: 14.243062),
+                                               latitudinalMeters: 7000,
+                                              longitudinalMeters: 7000)
+    
+    
     var body: some View {
-       
         
-        VStack(spacing:35){
+        Map {
+            ForEach((1...4).reversed(), id: \.self) { a in
+                personagens[c].places[a]
+              }
             
-            ProgressView(value: progress)
-                .progressViewStyle(.linear)
-                .padding()
-          
-            HStack(alignment:.center){
-                Text("Domanda lunghissima per capire come viene")
-                    .font(.title)
-                    .multilineTextAlignment(.center)
-                    .bold()
-
-                    
-                
-                
-
-            }.padding()
-            Button{
-                progress += 0.00
-                    
-                
-            }label:{
-                Text("Si")
-                    .font(.title3)
-                    .foregroundColor(.black)
-                    .frame(width:300,height: 55)
-                    .background(.white)
-                    
-                    
-            }.clipShape(RoundedRectangle(cornerRadius: 20))
-                .shadow(radius:5.0)
-            
-            Button{
-                
-            }label:{
-                Text("No")
-                    
-                    .font(.title3)
-                    .foregroundColor(.black)
-                    .frame(width:300,height: 55)
-                    .background(.white)
-                    .shadow(radius:5.0)
-                
-            }.clipShape(RoundedRectangle(cornerRadius: 20))
-                .shadow(radius:5.0)
-        }.frame(height:670)
+        }.onAppear(perform: {
+            var b = 0
+            for char in personagens{
+                b += 1
+                if(char.name == UserDefaults.standard.string(forKey: "my_character")){UserDefaults.standard.set(b,forKey: "my_var")}
+            }
+        })
+        .ignoresSafeArea()
     }
 }
     #Preview {

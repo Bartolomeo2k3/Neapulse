@@ -51,7 +51,7 @@ struct QuizView: View {
                     nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 0))
                     if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
                         for char in nostroQuiz.characters {
-                            if (char.points > 3){
+                            if (char.points > 3.5){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
                                 myCharImage = char.image
                             }
@@ -85,7 +85,7 @@ struct QuizView: View {
                     nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 1))
                     if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
                         for char in nostroQuiz.characters {
-                            if (char.points > 3){
+                            if (char.points > 3.5){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
                                 myCharImage = char.image
                             }
