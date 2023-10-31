@@ -8,6 +8,8 @@
 import SwiftUI
 import MapKit
 
+
+
 struct MapView: View {
     @State private var cameraPosition: MapCameraPosition = .region(.userRegion)
     @State private var searchText = ""
@@ -18,7 +20,7 @@ struct MapView: View {
     @State private var routeDisaplaying = false
     @State private var route: MKRoute?
     @State private var routeDestination: MKMapItem?
-   
+    var personagens = CharacterList().characters
     @ObservedObject var locationManager = LocationManager.shared
     
    /* init() {
@@ -30,11 +32,10 @@ struct MapView: View {
                     
         }
     }*/
-    
+
     var body: some View {
         
         NavigationStack{
-            
             VStack(alignment: .leading){
                 Text("Map")
                   .font(.largeTitle)
@@ -45,15 +46,17 @@ struct MapView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(Color.gray)
                     .padding(.bottom)
+                Map(position: $cameraPosition, selection: $mapSelection){
+                //pins di munaciello
+                    personagens[0].places[0]
+                    personagens[0].places[1]
+                    personagens[0].places[2]
+                    personagens[0].places[3]
+                    personagens[0].places[4]
+                    personagens[0].places[5]
+                    personagens[0].places[6]
+                    personagens[0].places[7]
                 
-                Map(position: $cameraPosition, selection: $mapSelection ){
-                    
-                  
-                   Marker("MY",coordinate: CLLocationCoordinate2D(latitude: 40.8517746, longitude: 14.2681244))
-                    
-                    
-               
-                    
                     ForEach(results, id:\.self){item in
                         if routeDisaplaying{
                             if item == routeDestination{
@@ -183,6 +186,7 @@ extension MKCoordinateRegion{
         return .init(center: .userLocation, latitudinalMeters: 3000, longitudinalMeters: 3000)
     }
 }
+
 
 #Preview {
     MapView()

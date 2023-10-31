@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import _MapKit_SwiftUI
 
 struct Character{
     var id: UUID = UUID()
@@ -15,5 +16,6 @@ struct Character{
     var history:String = ""
     var caracteristic:String = ""
     var image:String = "noimage"
+    var places:[Marker] = [Marker("Teatro San Ferdinando", coordinate: CLLocationCoordinate2D(latitude: 40.8517746, longitude: 14.2681244))]
     
 }
