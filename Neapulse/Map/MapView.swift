@@ -48,7 +48,8 @@ struct MapView: View {
                 
                 Map(position: $cameraPosition, selection: $mapSelection ){
                     
-                   //Marker("my location",coordinate: .userLocation)
+                  
+                   Marker("MY",coordinate: CLLocationCoordinate2D(latitude: 40.8517746, longitude: 14.2681244))
                     
                     
                
