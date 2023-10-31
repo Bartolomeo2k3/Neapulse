@@ -178,7 +178,7 @@ struct CharactersView: View {
                 if (UserDefaults.standard.string(forKey: "my_character") == nil){
                     NavigationLink(destination:Neapulse.QuizView()){
                         Text("Click")
-                    }}
+                    }} else{Button("remove character"){UserDefaults.standard.removeObject(forKey: "my_character")}}
             } .padding()
                     .navigationTitle("Characters")
                     
