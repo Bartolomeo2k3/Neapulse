@@ -15,7 +15,6 @@ struct HistoryView: View {
         ScrollView{
 
             Text(charName).fontWeight(.bold)
-                .font(.custom("Herculanum", size: 30))
                 .multilineTextAlignment(.leading).padding(.top, 20.0)
             Image(charImage).resizable()
                 .aspectRatio(contentMode: .fit)
