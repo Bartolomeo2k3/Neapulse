@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizView: View {
     @State var progress:Float = 0
+    @State var myCharImage:String = ""
     @State var nostroQuiz = Quiz(questions: [
         Question(text: "What would you like to do the most?",answers: ["Drink good wine and live life as a work of art","Discover new places and find better myself "],charIndex: [[0,1,2,3,4,5,6,7],[8,9,10,11]]),
         Question(text: "What is closest to your life's purpouse?",answers: ["To love art and create something new","To work at my best to enjoy life and my free time"],charIndex: [[0,1,2,3],[4,5,6,7,8,9,10,11]]),
@@ -52,6 +53,7 @@ struct QuizView: View {
                         for char in nostroQuiz.characters {
                             if (char.points > 3){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
+                                myCharImage = char.image
                             }
                         }
                     }
@@ -85,6 +87,7 @@ struct QuizView: View {
                         for char in nostroQuiz.characters {
                             if (char.points > 3){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
+                                myCharImage = char.image
                             }
                         }
                     }
@@ -118,8 +121,18 @@ struct QuizView: View {
             
             NavigationLink(destination: Neapulse.CharactersView()) {
                 VStack{
-                    Text("YOU FINISHED THE TEST")
-                    Text("Go back to the App")}}
+                    Text("YOU FINISHED THE TEST").font(.title)
+                        .multilineTextAlignment(.center)
+                        .bold().padding([.top, .leading, .trailing]).foregroundColor(.black)
+                    Text("You are")
+                    Text(UserDefaults.standard.string(forKey: "my_character") ?? "").fontWeight(.bold)
+                        .font(.custom("Herculanum", size: 30))
+                        .multilineTextAlignment(.leading).padding(.top, 10.0).foregroundColor(.black)
+                    Image(myCharImage).resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .shadow(color: .gray, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
+                }}
             }
         }
     }
