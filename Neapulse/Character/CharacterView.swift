@@ -177,8 +177,18 @@ struct CharactersView: View {
                         }
                 if (UserDefaults.standard.string(forKey: "my_character") == nil){
                     NavigationLink(destination:Neapulse.QuizView()){
-                        Text("Click")
-                    }} else{Button("remove character"){UserDefaults.standard.removeObject(forKey: "my_character")}}
+                        Text("Click").font(.title3)
+                            .foregroundColor(.white)
+                            .frame(width:150,height: 35)
+                            .background(.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .shadow(radius:5.0)
+                    }} else{Button("remove character"){UserDefaults.standard.removeObject(forKey: "my_character")}.font(.title3)
+                            .foregroundColor(.white)
+                            .frame(width:150,height: 25)
+                            .background(.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .shadow(radius:5.0)}
             } .padding()
                     .navigationTitle("Characters")
                     
