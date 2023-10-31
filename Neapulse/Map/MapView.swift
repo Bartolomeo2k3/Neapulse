@@ -56,7 +56,6 @@ struct MapView: View {
                     personagens[0].places[5]
                     personagens[0].places[6]
                     personagens[0].places[7]
-                    personagens[0].places[8]
                 
                     ForEach(results, id:\.self){item in
                         if routeDisaplaying{
