@@ -48,14 +48,11 @@ struct MapView: View {
                     .padding(.bottom)
                 Map(position: $cameraPosition, selection: $mapSelection){
                 //pins di munaciello
-                    personagens[0].places[0]
-                    personagens[0].places[1]
-                    personagens[0].places[2]
-                    personagens[0].places[3]
-                    personagens[0].places[4]
-                    personagens[0].places[5]
-                    personagens[0].places[6]
-                    personagens[0].places[7]
+                    personagens[7].places[0]
+                    personagens[7].places[1]
+                    personagens[7].places[2]
+                    personagens[7].places[3]
+                    personagens[7].places[4]
                 
                     ForEach(results, id:\.self){item in
                         if routeDisaplaying{
