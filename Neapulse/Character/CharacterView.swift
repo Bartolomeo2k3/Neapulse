@@ -182,10 +182,10 @@ struct CharactersView: View {
                         }
                 if (UserDefaults.standard.string(forKey: "my_character") == nil){
                     NavigationLink(destination:Neapulse.QuizView()){
-                        Text("Click").font(.title3)
+                        Text("Find your character").font(.title3)
                             .padding()
                             .foregroundColor(.white)
-                            .frame(width:150,height: 35)
+                            .frame(width:250,height: 45)
                             .background(.black)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .shadow(radius:5.0)

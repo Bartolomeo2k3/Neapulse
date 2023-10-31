@@ -72,7 +72,7 @@ struct MapView: View {
                             .stroke(.blue, lineWidth: 6)
                     }
                     
-                }.overlay(alignment:.top){
+                }/*.overlay(alignment:.top){
                     TextField("Search for a place...",text: $searchText)
                         .font(.subheadline)
                         .padding(12)
@@ -84,7 +84,7 @@ struct MapView: View {
                 .onSubmit(of: .text){
                     Task{
                         await searchPlaces()}
-                }
+                }*/
                 .onChange(of: getDirections, {oldValue, newValue in
                     if newValue{
                         fetchRoute()
