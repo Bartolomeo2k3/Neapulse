@@ -12,6 +12,7 @@ struct CharactersView: View {
     @State private var characters = CharacterList().characters
     var body: some View {
         NavigationStack{
+            Text("Discover the stories of the neapolitan characters").foregroundColor(.gray).padding(.horizontal, 12.0)
             ScrollView{
             
                         HStack{
