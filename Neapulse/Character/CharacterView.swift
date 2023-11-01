@@ -12,7 +12,7 @@ struct CharactersView: View {
     @State private var characters = CharacterList().characters
     var body: some View {
         NavigationStack{
-            Text("Discover the stories of the neapolitan characters").fontWeight(.medium).foregroundColor(.gray).padding(.leading, 14.0)
+            Text("Discover the stories of the neapolitan characters").font(.subheadline).foregroundColor(.gray).padding(/*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
             ScrollView{
             
                         HStack{
@@ -182,25 +182,26 @@ struct CharactersView: View {
                                 
                             
                         }
-                if (UserDefaults.standard.string(forKey: "my_character") == nil){
-                    NavigationLink(destination:Neapulse.QuizView()){
-                        Text("Find your character").font(.title3)
-                            .padding()
-                            .foregroundColor(.white)
-                            .frame(width:250,height: 45)
-                            .background(.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .shadow(radius:5.0)
-                    }} else{Button("remove character"){UserDefaults.standard.removeObject(forKey: "my_character")
-                    myChar=""}
-                            .font(.title3)
-                            .padding()
-                            .foregroundColor(.white)
-                            .frame(width:250,height: 45)
-                            .background(.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .shadow(radius:5.0)}
-            } .padding()
+                VStack{
+                            if (UserDefaults.standard.string(forKey: "my_character") == nil){
+                                NavigationLink(destination:Neapulse.QuizView()){
+                                    Text("Find your character").font(.title3)
+                                        .padding()
+                                        .foregroundColor(.white)
+                                        .frame(width:250,height: 45)
+                                        .background(.black)
+                                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                                        .shadow(radius:5.0)
+                                }} else{Button("remove character"){UserDefaults.standard.removeObject(forKey: "my_character")
+                                    myChar=""}
+                                .font(.title3)
+                                .padding()
+                                .foregroundColor(.white)
+                                .frame(width:250,height: 45)
+                                .background(.black)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                    .shadow(radius:5.0)}
+                }.padding()} .padding()
                 .navigationTitle("Characters")
                     
                 }

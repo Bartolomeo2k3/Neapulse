@@ -38,103 +38,103 @@ struct MapView: View {
     var body: some View {
         
         NavigationStack{
-            VStack(alignment: .leading){
-                Text("Map")
-                  .font(.largeTitle)
-                  .bold()
-                  .padding(.top, 13.0)
-                Text(UserDefaults.standard.string(forKey: "my_character") == nil ? "Find a character to customize your map": "Find places based on your " + (myChar ?? "") + " personality")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.gray)
-                    .padding(.bottom)
-                Map(position: $cameraPosition, selection: $mapSelection){
-                //pins di Pazzariello
-                 
-                    ForEach(personagens[myIndex ?? 7].places){per in
-                        Marker(per.name, coordinate: CLLocationCoordinate2D(latitude: per.lat, longitude: per.lon))
-                    }
-                
-                    ForEach(results, id:\.self){item in
-                        if routeDisaplaying{
-                            if item == routeDestination{
-                    let placemark = item.placemark
-                    Marker(placemark.name ?? "", coordinate: placemark.coordinate)
+            ScrollView{
+                VStack(alignment: .leading){
+                    Text("Map")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding(.top, 25.0)
+                    Text(UserDefaults.standard.string(forKey: "my_character") == nil ? "Find a character to customize your map": "Find places based on your " + (myChar ?? "") + " personality")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                    Map(position: $cameraPosition, selection: $mapSelection){
+                        //pins di Pazzariello
+                        
+                        ForEach(personagens[myIndex ?? 7].places){per in
+                            Marker(per.name, coordinate: CLLocationCoordinate2D(latitude: per.lat, longitude: per.lon))
+                        }
+                        
+                        ForEach(results, id:\.self){item in
+                            if routeDisaplaying{
+                                if item == routeDestination{
+                                    let placemark = item.placemark
+                                    Marker(placemark.name ?? "", coordinate: placemark.coordinate)
+                                    
+                                }
                                 
+                            }else{
+                                let placemark = item.placemark
+                                Marker(placemark.name ?? "", coordinate: placemark.coordinate)
                             }
-
-                    }else{
-                    let placemark = item.placemark
-                    Marker(placemark.name ?? "", coordinate: placemark.coordinate)
-                    }
+                            
+                        }
+                        if let route{
+                            MapPolyline(route.polyline)
+                                .stroke(.blue, lineWidth: 6)
+                        }
+                        
+                    }.onAppear(perform: {
+                        myChar = UserDefaults.standard.string(forKey: "my_character")
+                        myIndex = ["Munaciello", "Federico II","Bella'Mbriana", "Virgilio", "Partenope", "Pulcinella", "Giovanna II",  "Pazzariello","San Gennaro","Posillipo","Sibilla Cumana",  "Colapesce"].firstIndex(of: UserDefaults.standard.string(forKey: "my_character"))
+                    })/*.overlay(alignment:.top){
+                       TextField("Search for a place...",text: $searchText)
+                       .font(.subheadline)
+                       .padding(12)
+                       .background(.white)
+                       .padding()
+                       .shadow(radius: 5 )
+                       
+                       }
+                       .onSubmit(of: .text){
+                       Task{
+                       await searchPlaces()}
+                       }*/
+                    .onChange(of: getDirections, {oldValue, newValue in
+                        if newValue{
+                            fetchRoute()
+                        }
+                    })
+                    
+                    .onChange(of: mapSelection , { oldValue, newValue in
+                        showDetails = newValue != nil
+                    })
+                    
+                    
+                    
+                    .sheet(isPresented: $showDetails, content:{ LocationDetailView(mapSelection:  $mapSelection, show: $showDetails, getDirections: $getDirections)
+                            .presentationDetents([.height(300)])
+                            .presentationBackgroundInteraction(.enabled(upThrough: .height(300)))
+                            .presentationCornerRadius(12)
+                    })
+                    .mapControls{
                         
                     }
-                    if let route{
-                        MapPolyline(route.polyline)
-                            .stroke(.blue, lineWidth: 6)
-                    }
                     
-                }.onAppear(perform: {
-                    myChar = UserDefaults.standard.string(forKey: "my_character")
-                    myIndex = ["Munaciello", "Federico II","Bella'Mbriana", "Virgilio", "Partenope", "Pulcinella", "Giovanna II",  "Pazzariello","San Gennaro","Posillipo","Sibilla Cumana",  "Colapesce"].firstIndex(of: UserDefaults.standard.string(forKey: "my_character"))
-                })/*.overlay(alignment:.top){
-                    TextField("Search for a place...",text: $searchText)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(.white)
-                        .padding()
-                        .shadow(radius: 5 )
-                    
-                }
-                .onSubmit(of: .text){
-                    Task{
-                        await searchPlaces()}
-                }*/
-                .onChange(of: getDirections, {oldValue, newValue in
-                    if newValue{
-                        fetchRoute()
-                    }
-                })
+                    .frame(height:500)
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
+                    .padding()
+                    .mapStyle(.standard)
+                    /*VStack{
+                     Button(){
+                     LocationManager.shared.requestLocation()
+                     }label:{
+                     Text("Allow Location")
+                     .padding(.horizontal)
+                     .font(.subheadline)
+                     .foregroundColor(.gray)
+                     }
+                     .frame(width:UIScreen.main.bounds.width)
+                     .padding(.horizontal, -20)
+                     }*/
+                }.padding()
+                Text("Megl sul ca mal accompagnat")
                 
-                .onChange(of: mapSelection , { oldValue, newValue in
-                showDetails = newValue != nil
-                })
-                    
-                    
-                    
-                .sheet(isPresented: $showDetails, content:{ LocationDetailView(mapSelection:  $mapSelection, show: $showDetails, getDirections: $getDirections)
-                        .presentationDetents([.height(300)])
-                        .presentationBackgroundInteraction(.enabled(upThrough: .height(300)))
-                        .presentationCornerRadius(12)
-                })
-                .mapControls{
-                    
-                }
                 
-                .frame(height:500)
-                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
-                .padding()
-                .mapStyle(.standard)
-                /*VStack{
-                    Button(){
-                        LocationManager.shared.requestLocation()
-                    }label:{
-                        Text("Allow Location")
-                            .padding(.horizontal)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                    }
-                    .frame(width:UIScreen.main.bounds.width)
-                    .padding(.horizontal, -20)
-                }*/
-            }.padding()
-            Text("Megl sul ca mal accompagnat")
-              
-            
-                .font(.custom("Herculanum", size: 20))
-           
-                .multilineTextAlignment(.leading)
-            
+                    .font(.custom("Herculanum", size: 20))
+                
+                    .multilineTextAlignment(.leading)
+            }
         }
     }
     
