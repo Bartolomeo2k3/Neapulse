@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B27A6F22AEFB84200CB1A5A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */; };
 		6B27A6F42AEFBDC300CB1A5A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */; };
+		6B4DC2A22AF2A5DE007664D1 /* PinPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DC2A12AF2A5DE007664D1 /* PinPoint.swift */; };
 		6B67358D2AF0416800456593 /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B67358C2AF0416800456593 /* CharacterListModel.swift */; };
 		6B94B91D2AE921B6003D5E33 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91C2AE921B6003D5E33 /* QuizView.swift */; };
 		6B94B91F2AE921C3003D5E33 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		6B4DC2A12AF2A5DE007664D1 /* PinPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPoint.swift; sourceTree = "<group>"; };
 		6B67358C2AF0416800456593 /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
 		6B94B91C2AE921B6003D5E33 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		6B94B91E2AE921C3003D5E33 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				F7A8FF132ADFE84D0047DEE1 /* MapView.swift */,
 				6B27A6F12AEFB84200CB1A5A /* LocationManager.swift */,
 				6B27A6F32AEFBDC300CB1A5A /* LocationDetailView.swift */,
+				6B4DC2A12AF2A5DE007664D1 /* PinPoint.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				F77E67D02ADFE1E1004AF7F0 /* NeapulseApp.swift in Sources */,
 				6B94B9232AE9282C003D5E33 /* CharacterModel.swift in Sources */,
 				6B94B9212AE921CF003D5E33 /* QuizModel.swift in Sources */,
+				6B4DC2A22AF2A5DE007664D1 /* PinPoint.swift in Sources */,
 				F7EAFD5A2AE263C800007E3F /* Folklore.swift in Sources */,
 				F644590B2AF03DEB00B0A06D /* HistoryView.swift in Sources */,
 				6B94B91D2AE921B6003D5E33 /* QuizView.swift in Sources */,

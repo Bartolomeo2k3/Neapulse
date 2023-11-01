@@ -24,7 +24,7 @@ struct NeapulseApp: App {
                         Image(systemName:"theatermasks")
                         Text("Characters")
                     }
-                
+    
                 LifeStyleView()
                     .tabItem{
                         Image(systemName:"figure.walk")

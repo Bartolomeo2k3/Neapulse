@@ -21,6 +21,8 @@ struct MapView: View {
     @State private var route: MKRoute?
     @State private var routeDestination: MKMapItem?
     var personagens = CharacterList().characters
+    @State var myChar = UserDefaults.standard.string(forKey: "my_character")
+    @State var myIndex = ["Munaciello", "Federico II","Bella'Mbriana", "Virgilio", "Partenope", "Pulcinella", "Giovanna II",  "Pazzariello","San Gennaro","Posillipo","Sibilla Cumana",  "Colapesce"].firstIndex(of: UserDefaults.standard.string(forKey: "my_character"))
     @ObservedObject var locationManager = LocationManager.shared
     
    /* init() {
@@ -41,18 +43,17 @@ struct MapView: View {
                   .font(.largeTitle)
                   .bold()
                   .padding(.top, 13.0)
-                Text("Find a character to customize your map")
+                Text(UserDefaults.standard.string(forKey: "my_character") == nil ? "Find a character to customize your map": "Find places based on your " + (myChar ?? "") + " personality")
                     .font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.gray)
                     .padding(.bottom)
                 Map(position: $cameraPosition, selection: $mapSelection){
                 //pins di Pazzariello
-                    personagens[7].places[0]
-                    personagens[7].places[1]
-                    personagens[7].places[2]
-                    personagens[7].places[3]
-                    personagens[7].places[4]
+                 
+                    ForEach(personagens[myIndex ?? 7].places){per in
+                        Marker(per.name, coordinate: CLLocationCoordinate2D(latitude: per.lat, longitude: per.lon))
+                    }
                 
                     ForEach(results, id:\.self){item in
                         if routeDisaplaying{
@@ -73,7 +74,10 @@ struct MapView: View {
                             .stroke(.blue, lineWidth: 6)
                     }
                     
-                }/*.overlay(alignment:.top){
+                }.onAppear(perform: {
+                    myChar = UserDefaults.standard.string(forKey: "my_character")
+                    myIndex = ["Munaciello", "Federico II","Bella'Mbriana", "Virgilio", "Partenope", "Pulcinella", "Giovanna II",  "Pazzariello","San Gennaro","Posillipo","Sibilla Cumana",  "Colapesce"].firstIndex(of: UserDefaults.standard.string(forKey: "my_character"))
+                })/*.overlay(alignment:.top){
                     TextField("Search for a place...",text: $searchText)
                         .font(.subheadline)
                         .padding(12)

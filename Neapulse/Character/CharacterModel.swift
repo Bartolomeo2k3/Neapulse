@@ -16,6 +16,6 @@ struct Character{
     var history:String = ""
     var caracteristic:String = ""
     var image:String = "noimage"
-    var places:[Marker] = [Marker("Teatro San Ferdinando", coordinate: CLLocationCoordinate2D(latitude: 40.8517746, longitude: 14.2681244))]
+    var places:[PinPoint] = [PinPoint(name:"Spritz ai Quartieri Spagnoli",lat: 40.842189935688204, lon: 14.247631961407778)]
     
 }
