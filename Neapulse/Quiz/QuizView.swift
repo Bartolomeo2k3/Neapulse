@@ -128,7 +128,7 @@ struct QuizView: View {
                     Text(UserDefaults.standard.string(forKey: "my_character") ?? "").fontWeight(.bold)
                         .font(.custom("Herculanum", size: 30))
                         .multilineTextAlignment(.leading).padding(.top, 10.0).foregroundColor(.black)
-                    Image(myCharImage).resizable()
+                     Image(myCharImage).resizable()
                         .aspectRatio(contentMode: .fit)
                         .shadow(color: .gray, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     

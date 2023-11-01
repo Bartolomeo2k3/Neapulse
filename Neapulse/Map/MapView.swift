@@ -51,7 +51,7 @@ struct MapView: View {
                     Map(position: $cameraPosition, selection: $mapSelection){
                         //pins di Pazzariello
                         
-                        ForEach(personagens[myIndex ?? 7].places){per in
+                        ForEach(personagens[myIndex ?? 11].places){per in
                             Marker(per.name, coordinate: CLLocationCoordinate2D(latitude: per.lat, longitude: per.lon))
                         }
                         

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CharactersView: View {
     @State var myChar = UserDefaults.standard.string(forKey: "my_character")
+    @State private var showPin: Bool = false
     @State private var characters = CharacterList().characters
     var body: some View {
         NavigationStack{
@@ -192,15 +193,20 @@ struct CharactersView: View {
                                         .background(.black)
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                         .shadow(radius:5.0)
-                                }} else{Button("remove character"){UserDefaults.standard.removeObject(forKey: "my_character")
-                                    myChar=""}
-                                .font(.title3)
-                                .padding()
-                                .foregroundColor(.white)
-                                .frame(width:250,height: 45)
-                                .background(.black)
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
-                                    .shadow(radius:5.0)}
+                                }} else {
+                                    Button("remove character")
+                                    {
+                                        showPin.toggle()
+                                        UserDefaults.standard.removeObject(forKey: "my_character")
+                                        myChar=""}
+                                    .font(.title3)
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .frame(width:250,height: 45)
+                                    .background(.black)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                                    .shadow(radius:5.0)
+                                                                     }
                 }.padding()} .padding()
                 .navigationTitle("Characters")
                     
