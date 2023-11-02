@@ -90,6 +90,7 @@ struct QuizView: View {
                             if (char.points > 3.5){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
                                 myCharImage = char.image
+                                myCharCaracteristic = char.caracteristic
                                 
                             }
                         }
