@@ -98,8 +98,7 @@ struct QuizView: View {
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
                                 myCharImage = char.image
                                 myCharCaracteristic = char.caracteristic
-                               break
-                            }
+                                                        }
                         }
                     }
                     nostroQuiz.nextQuestion()
