@@ -50,10 +50,10 @@ struct MapView: View {
                         .foregroundColor(Color.gray)
                     Map(position: $cameraPosition, selection: $mapSelection){
                         //pins di Pazzariello
-                        if(UserDefaults.standard.string(forKey: "my_character") != nil){
+                  
                             ForEach(personagens[myIndex ?? 11].places){per in
                                 Marker(per.name, coordinate: CLLocationCoordinate2D(latitude: per.lat, longitude: per.lon))
-                            }}
+                            }
                         
                         ForEach(results, id:\.self){item in
                             if routeDisaplaying{
