@@ -128,7 +128,7 @@ struct MapView: View {
                      .padding(.horizontal, -20)
                      }*/
                 }.padding()
-                Text("Megl sul ca mal accompagnat")
+                Text("Meglio sulo ca male accumpagnato")
                 
                 
                     .font(.custom("Herculanum", size: 20))
