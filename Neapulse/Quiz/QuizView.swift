@@ -51,11 +51,15 @@ struct QuizView: View {
                     progress += 1
                     nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 0))
                     if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
+                        let sorted = nostroQuiz.characters.sorted(by: { lhs, rhs in
+                          return lhs.points > rhs.points
+                        })
                         for char in nostroQuiz.characters {
-                            if (char.points > 3.5){
+                            if (char.points == sorted[0].points){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
                                 myCharImage = char.image
                                 myCharCaracteristic = char.caracteristic
+                                
                             }
                         }
                     }
@@ -86,12 +90,15 @@ struct QuizView: View {
                     progress += 1
                     nostroQuiz.increasePoints(index:nostroQuiz.getCharacters(_var: 1))
                     if(nostroQuiz.questionIndex == 5 || nostroQuiz.questionIndex == 8 || nostroQuiz.questionIndex == 11){
+                        let sorted = nostroQuiz.characters.sorted(by: { lhs, rhs in
+                          return lhs.points > rhs.points
+                        })
                         for char in nostroQuiz.characters {
-                            if (char.points > 3.5){
+                            if (char.points == sorted[0].points){
                                 UserDefaults.standard.set(char.name, forKey: "my_character")
                                 myCharImage = char.image
                                 myCharCaracteristic = char.caracteristic
-                                
+                               break
                             }
                         }
                     }
