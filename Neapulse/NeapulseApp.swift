@@ -12,6 +12,7 @@ struct NeapulseApp: App {
     var body: some Scene {
         WindowGroup {
             
+           
             TabView{
                 MapView()
                     .tabItem{
