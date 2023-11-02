@@ -125,11 +125,11 @@ struct QuizView: View {
             NavigationLink(destination: Neapulse.CharactersView()) {
                
                 VStack{ ScrollView{
-                    Text("YOUR CHARACTER IS").font(.title)
+                    Text("YOUR CHARACTER IS").font(.title2)
                         .multilineTextAlignment(.center)
                         .bold().foregroundColor(.black)
                     Text(UserDefaults.standard.string(forKey: "my_character") ?? "").fontWeight(.bold)
-                        .font(.custom("Herculanum", size: 30))
+                        .font(.custom("Herculanum", size: 40))
                         .multilineTextAlignment(.leading).padding(.top, 10.0).foregroundColor(.black)
                     Image(myCharImage).resizable()
                         .aspectRatio(contentMode: .fit)
