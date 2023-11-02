@@ -207,7 +207,10 @@ struct CharactersView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .shadow(radius:5.0)
                         }
-                }.padding()} .padding()
+                }.padding()}.padding()
+                .onAppear(perform: {
+                    myChar = UserDefaults.standard.string(forKey: "my_character")
+                })
             .navigationTitle("Characters")
                 
             
